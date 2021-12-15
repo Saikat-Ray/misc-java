@@ -1,0 +1,23 @@
+===================================
+Kafka Commands
+===================================
+zookeeper-server-start.bat ../../config/zookeeper.properties
+zookeeper-server-stop.bat ../../config/zookeeper.properties
+
+kafka-server-start.bat ../../config/server.properties
+
+kafka-server-stop.bat ../../config/server.properties
+
+kafka-topics.bat --create --topic TruckmateOrdersTopic --bootstrap-server localhost:9092
+
+kafka-console-producer.bat --topic TruckmateOrdersTopic --bootstrap-server localhost:9092
+
+kafka-console-consumer.bat --topic Test-Saikat-AnotherTopic --from-beginning --bootstrap-server localhost:9092
+
+kafka-topics.bat --create --topic <topic_name> --bootstrap-server localhost:9092
+
+List all Topic
+kafka-topics.bat --list --zookeeper localhost:2181
+
+Show all messages in Topic
+C:\kafka\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Test-Saikat-AnotherTopic --from-beginning
